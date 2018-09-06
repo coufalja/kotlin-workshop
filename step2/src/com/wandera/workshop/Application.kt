@@ -34,11 +34,11 @@ fun Application.main() {
     routing {
         get("/") {
             call.respondHtml {
-                head{
+                head {
                     title("Kwitter")
                 }
                 body {
-                    h1 { + "Kwitter" }
+                    h1 { +"Welcome to Kwitter" }
                 }
             }
         }
