@@ -1,0 +1,41 @@
+# For a quick start check out our HTTP Requests collection (Tools|HTTP Client|Open HTTP Requests Collection).
+#
+# Following HTTP Request Live Templates are available:
+# * 'gtrp' and 'gtr' create a GET request with or without query parameters;
+# * 'ptr' and 'ptrp' create a POST request with a simple or parameter-like body;
+# * 'mptr' and 'fptr' create a POST request to submit a form with a text or file field (multipart/form-data);
+POST http://localhost:8080/kweets
+Content-Type: application/json
+
+{
+  "id": "not_generated",
+  "userId": "John",
+  "text": "This is a first kweet"
+}
+
+###
+
+POST http://localhost:8080/kweets
+Content-Type: application/json
+
+{
+  "userId": "John",
+  "text": "This is a first kweet"
+}
+
+###
+
+GET http://localhost:8080/kweets
+Accept: application/json
+
+###
+
+GET http://localhost:8080/kweets?userId=John
+Accept: application/json
+
+###
+
+DELETE http://localhost:8080/kweets/not_generated
+Accept: application/json
+
+###
