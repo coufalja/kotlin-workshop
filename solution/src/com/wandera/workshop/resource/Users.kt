@@ -9,30 +9,30 @@ import io.ktor.response.respond
 import io.ktor.routing.Route
 import io.ktor.routing.get
 import io.ktor.routing.post
+import io.ktor.routing.route
 
 fun Route.users(service: UserService) {
 
-    get("/users/{id?}") {
-        val id = call.parameters["id"]
-        when {
-            id != null -> {
-                val user = service.getUser(id)
-                if (user != null) {
-                    call.respond(user)
-                } else {
-                    call.respond(HttpStatusCode.NotFound)
+    route("/users") {
+
+        get("/{id?}") {
+            val id = call.parameters["id"]
+            when {
+                id != null -> {
+                    val user = service.getUser(id)
+                    when {
+                        user != null -> call.respond(user)
+                        else -> call.respond(HttpStatusCode.NotFound)
+                    }
                 }
+                else -> call.respond(service.listUsers())
             }
-            else -> call.respond(service.listUsers())
+        }
+
+        post {
+            call.respond(service.createOrUpdateUser(call.receive(User::class)))
         }
     }
 
-    get("/users") {
-        call.respond(service.listUsers())
-    }
-
-    post("/users") {
-        call.respond(service.createOrUpdateUser(call.receive(User::class)))
-    }
 
 }

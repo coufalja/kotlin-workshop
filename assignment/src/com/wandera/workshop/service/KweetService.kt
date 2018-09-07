@@ -14,7 +14,7 @@ class KweetService {
         TODO("Create Kweet if not exists throws DuplicateIdException otherwise")
     }
 
-    fun deleteKweet(id: String) {
+    fun deleteKweet(id: String): Kweet? {
         TODO("Delete Kweet")
     }
 
