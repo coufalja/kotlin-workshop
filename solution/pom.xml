@@ -7,7 +7,7 @@
     <name>kotlin-workshop</name>
     <description>kotlin-workshop</description>
     <properties>
-        <kotlin_version>1.2.61</kotlin_version>
+        <kotlin_version>1.4.32</kotlin_version>
         <ktor_version>1.5.4</ktor_version>
         <logback_version>1.2.1</logback_version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
