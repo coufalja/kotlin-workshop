@@ -11,7 +11,7 @@
         <ktor_version>1.5.4</ktor_version>
         <logback_version>1.2.1</logback_version>
         <h2_version>1.4.196</h2_version>
-        <hikari_version>3.2.0</hikari_version>
+        <hikari_version>3.4.5</hikari_version>
         <exposed_version>0.10.4</exposed_version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <kotlin.compiler.incremental>true</kotlin.compiler.incremental>
