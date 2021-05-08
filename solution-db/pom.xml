@@ -12,7 +12,7 @@
         <logback_version>1.2.1</logback_version>
         <h2_version>1.4.196</h2_version>
         <hikari_version>3.2.0</hikari_version>
-        <exposed_version>0.10.4</exposed_version>
+        <exposed_version>0.17.13</exposed_version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <kotlin.compiler.incremental>true</kotlin.compiler.incremental>
         <main.class>io.ktor.server.netty.DevelopmentEngine</main.class>
